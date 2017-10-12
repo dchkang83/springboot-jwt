@@ -1,0 +1,32 @@
+server.port: 8080
+
+security.oauth2.resource:
+  filter-order: 3
+
+
+
+
+security:
+  user:
+    name: user
+    password: test
+
+  oauth2:
+    client:
+      client-id: testjwtclientid
+      client-secret: MaYzkSjmkzPC57L
+      #client-id: foo
+      #client-secret: bar
+    authorization:
+      token-key-access: isAuthenticated()
+
+
+
+spring.h2.console:
+  enabled: true
+  path: /h2-console
+  
+logging.level:
+  org.springframework.boot: debug
+  org.h2: debug
+  
